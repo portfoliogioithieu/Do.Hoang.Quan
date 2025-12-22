@@ -1,0 +1,414 @@
+/* Reset cơ bản */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, sans-serif;}
+body {background:#f4f6f8; color:#333; line-height:1.6;}
+
+/* Header */
+header {background: linear-gradient(135deg, #4facfe, #00f2fe); color:white; padding:50px 20px;}
+header .header-content {display:flex; align-items:center; max-width:900px; margin:0 auto; gap:30px;}
+header img.avatar {width:200px; height:200px; object-fit:cover; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;}
+header img.avatar:hover {transform:scale(1.05); box-shadow:0 8px 25px rgba(0,0,0,0.3);}
+header .header-text h1 {font-size:2.5rem; margin-bottom:10px;}
+header .header-text p {font-size:1.5rem; margin-bottom:5px;}
+header .contact-btn {margin-top:10px; padding:10px 20px; background-color:#25D366; color:white; border-radius:30px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition: background-color 0.3s, transform 0.2s;}
+header .contact-btn:hover {background-color:#1ebe57; transform:scale(1.05);}
+header .contact-btn i {font-size:2rem;}
+
+/* Section chung */
+section {max-width:900px; margin:30px auto; padding:15px 20px;}
+section h2 {font-size:2rem; margin-bottom:15px; color:#4facfe; border-left: 5px solid #4facfe; padding-left: 10px;}
+section#about p {font-size:1.3rem;text-align: justify;text-justify: inter-word;}
+
+/* Thông tin cá nhân */
+#personal-info ul {list-style:none; padding:0;}
+#personal-info li {font-size:1.3rem; margin-bottom:10px;}
+#personal-info a {color:#25D366; text-decoration:none; transition: color 0.3s;}
+#personal-info a:hover {color:#1ebe57;}
+
+/* Học vấn */
+#education .education-item {display:block; margin-top:15px;}
+#education .edu-text {font-size:1.3rem; margin-bottom:10px;}
+
+/* Kinh nghiệm */
+#experience ul {list-style:disc; padding-left:20px;}
+#experience li {font-size:1.3rem; margin-bottom:15px;text-align: justify;text-justify: inter-word;}
+
+/* Chứng chỉ */
+#certifications .cert-item {margin-bottom:25px;}
+#certifications .cert-item p {font-size:1.5rem; font-weight:500; margin-bottom:10px;}
+#certifications .cert-item img {width:100%; max-width:800px; height:auto; display:block; border:2px solid #4facfe; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:contain;}
+
+/* Ideal */
+#idea ul {list-style:disc; padding-left:20px;}
+#idea li {font-size:1.3rem; margin-bottom:5px;}
+section#idea p {font-size:1.3rem;}
+
+/* Footer */
+footer {text-align:center; padding:20px; background:#222; color:#ccc; margin-top:50px;}
+
+/* Lightbox */
+#lightbox {display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;}
+#lightbox img.lightbox-content {max-width:90%; max-height:80%; border-radius:10px;}
+#lightbox .close {position:absolute; top:20px; right:35px; color:white; font-size:40px; cursor:pointer;}
+#lightbox .prev, #lightbox .next {cursor:pointer; position:absolute; top:50%; width:auto; padding:16px; color:white; font-weight:bold; font-size:40px; user-select:none; transform:translateY(-50%);}
+#lightbox .prev {left:20px;} #lightbox .next {right:20px;}
+#lightbox .prev:hover, #lightbox .next:hover, #lightbox .close:hover {color:#ddd;}
+
+/* Responsive */
+@media (max-width:768px){
+    header .header-content {flex-direction:column; text-align:center;}
+    header img.avatar {width:120px; height:120px;}
+    #education .edu-image img, #certifications .cert-item img {max-width:100%;}
+    header .header-text h1 {font-size:2rem;}
+    section h2 {font-size:1.5rem;}
+}
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* WhatsApp */
+.contact-btn.whatsapp {
+    background-color: #25D366;
+}
+.contact-btn.whatsapp:hover {
+    background-color: #1ebe57;
+}
+
+/* Zalo */
+.contact-btn.zalo {
+    background-color: #015ce0;
+}
+.contact-btn.zalo:hover {
+    background-color: #448cf1;
+}
+
+/* ===== Projects Gallery (Minimal) ===== */
+#projects .projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+#projects .projects-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projects .projects-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+/* ===== PDF / A4 PRINT OPTIMIZATION ===== */
+@media print {
+
+    /* Setup trang A4 */
+    @page {
+        size: A4;
+        margin: 18mm 16mm;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+        font-size: 11pt;
+        line-height: 1.45;
+    }
+
+    /* Header gọn – không nền */
+    header {
+        background: none !important;
+        color: #000 !important;
+        padding: 10mm 0 6mm;
+        border-bottom: 2px solid #000;
+    }
+
+    header .header-content {
+        flex-direction: row;
+        gap: 15mm;
+    }
+
+    header img.avatar {
+        width: 38mm;
+        height: 38mm;
+        box-shadow: none;
+    }
+
+    /* Ẩn nút, icon không cần thiết */
+    .contact-btn,
+    #lightbox,
+    .prev,
+    .next,
+    .close {
+        display: none !important;
+    }
+
+    /* Section */
+    section {
+        max-width: 100%;
+        margin: 6mm 0;
+        padding: 0;
+        page-break-inside: avoid;
+    }
+
+    section h2 {
+        font-size: 14pt;
+        color: #000;
+        border-left: 4px solid #000;
+        padding-left: 6px;
+        margin-bottom: 4mm;
+    }
+
+    section p,
+    section li {
+        font-size: 11pt;
+    }
+
+    /* Danh sách */
+    ul {
+        padding-left: 18px;
+    }
+
+    /* Gallery ảnh */
+    .projects-gallery,
+    .cert-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+    }
+
+    .projects-gallery img,
+    .cert-gallery img {
+        height: auto;
+        box-shadow: none;
+        border: 1px solid #999;
+        border-radius: 4px;
+    }
+
+    /* Học vấn */
+    #education .edu-image img {
+        max-width: 100%;
+        border: 1px solid #999;
+        box-shadow: none;
+    }
+
+    /* Footer */
+    footer {
+        background: none;
+        color: #000;
+        border-top: 1px solid #000;
+        font-size: 9pt;
+        margin-top: 8mm;
+    }
+}
+
+body p {
+    margin-bottom: 15px; /* khoảng cách 15px giữa các paragraph */
+    line-height: 1.6;    /* dễ đọc */
+}
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+/* ================================
+   REFERENCE TO PERSONS
+================================ */
+#references ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#references li {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#references li strong {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+/* Khoảng cách đẹp khi in PDF */
+@media print {
+    #references li {
+        font-size: 11pt;
+        margin-bottom: 6mm;
+        page-break-inside: avoid;
+    }
+
+    #references li strong {
+        font-size: 11.5pt;
+    }
+}
+/* ================================
+   REFERENCE LABELS
+================================ */
+#references .label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* In PDF */
+@media print {
+    #references .label {
+        font-weight: 700;
+    }
+}
+/* ================================
+   ABOUT – JOB POSITIONS
+================================ */
+#about ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+#about ul li {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+#about ul li b {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Làm nổi nhẹ phần giới thiệu trước danh sách */
+#about p:last-of-type {
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #about ul li {
+        font-size: 1.2rem;
+    }
+}
+
+/* Print / PDF */
+@media print {
+    #about ul {
+        padding-left: 18px;
+        margin-top: 4mm;
+    }
+
+    #about ul li {
+        font-size: 11pt;
+        margin-bottom: 3mm;
+        page-break-inside: avoid;
+    }
+
+    #about ul li b {
+        font-weight: 700;
+    }
+}
+/* Download CV */
+.contact-btn.download {
+    background-color: #dc3545; /* đỏ PDF */
+}
+
+.contact-btn.download:hover {
+    background-color: #b52a37;
+}
+@media print {
+    .contact-btn.download {
+        display: none !important;
+    }
+}
+
+/* Experience gallery */
+.experience-gallery {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.experience-gallery img {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Print A4 */
+@media print {
+    .experience-gallery {
+        gap: 6mm;
+    }
+
+    .experience-gallery img {
+        box-shadow: none;
+        border: 1px solid #999;
+    }
+}
+
+.lang-btn {
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lang-btn:hover {
+    background: #1a252f;
+}
+/* ===== HEADER BUTTON FONT SIZE ===== */
+header .contact-btn,
+header .lang-btn {
+    font-size: 1.2rem;   /* tăng chữ */
+    font-weight: 600;    /* chữ đậm vừa */
+    padding: 12px 22px;  /* nút to theo chữ */
+}
+
+/* Icon trong nút */
+header .contact-btn i {
+    font-size: 1.4rem;   /* icon to hơn chữ */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header .contact-btn,
+    header .lang-btn {
+        font-size: 1.1rem;
+        padding: 10px 18px;
+    }
+}
+.lang-btn {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
