@@ -412,3 +412,20 @@ header .contact-btn i {
     border-radius: 30px;
     background: linear-gradient(135deg, #2c3e50, #34495e);
 }
+#experience-vi h2,
+#experience-en h2 {
+    margin-left: -10px;
+}
+.experience p,
+.experience li {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+@media print {
+    .experience p,
+    .experience li {
+        font-size: 11pt;
+        line-height: 1.45;
+    }
+}
+
