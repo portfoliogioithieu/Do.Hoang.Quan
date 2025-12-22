@@ -428,4 +428,10 @@ header .contact-btn i {
         line-height: 1.45;
     }
 }
+/* ===== JUSTIFY ALL PARAGRAPHS ===== */
+section p,
+section li {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
