@@ -29,7 +29,7 @@ section#about p {font-size:1.3rem;text-align: justify;text-justify: inter-word;}
 #education .edu-text {font-size:1.3rem; margin-bottom:10px;}
 
 /* Kinh nghiệm */
-#experience ul {list-style:disc; padding-left:20px;}
+#experience ul {list-style:disc; padding-left:15px;}
 #experience li {font-size:1.3rem; margin-bottom:15px;text-align: justify;text-justify: inter-word;}
 
 /* Chứng chỉ */
