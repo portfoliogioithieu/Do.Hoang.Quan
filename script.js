@@ -139,21 +139,37 @@ document.addEventListener("DOMContentLoaded", () => {
         let scrollPos = window.scrollY + 150;
 
         sections.forEach(section => {
+
+            // ❌ bỏ qua section đang bị ẩn (khác ngôn ngữ)
+            if (section.offsetParent === null) return;
+
             const top = section.offsetTop;
             const height = section.offsetHeight;
             const id = section.getAttribute("id");
 
             if (scrollPos >= top && scrollPos < top + height) {
-                navLinks.forEach(link => link.classList.remove("active"));
 
-                const activeLink = document.querySelector(
-                    '.sidebar a[href="#' + id + '"]'
-                );
-                if (activeLink) activeLink.classList.add("active");
+                navLinks.forEach(link => {
+
+                    // ❌ bỏ qua link sidebar đang bị ẩn
+                    if (link.offsetParent === null) {
+                        link.classList.remove("active");
+                        return;
+                    }
+
+                    const href = link.getAttribute("href").substring(1);
+
+                    if (href === id) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
             }
         });
     }
 
     window.addEventListener("scroll", activateTOC);
 });
+
 
