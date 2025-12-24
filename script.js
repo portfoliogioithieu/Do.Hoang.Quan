@@ -128,4 +128,32 @@ function toggleJob(id) {
     title.classList.toggle("active");
 }
 
+// ===============================
+// TOC – Highlight when scrolling
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".sidebar a");
+
+    function activateTOC() {
+        let scrollPos = window.scrollY + 150;
+
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            const id = section.getAttribute("id");
+
+            if (scrollPos >= top && scrollPos < top + height) {
+                navLinks.forEach(link => link.classList.remove("active"));
+
+                const activeLink = document.querySelector(
+                    '.sidebar a[href="#' + id + '"]'
+                );
+                if (activeLink) activeLink.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", activateTOC);
+});
 
