@@ -1,5 +1,5 @@
 :root {
-    --sidebar-width: 350px; /* đúng width hiện tại của bạn */
+    --sidebar-width: 380px; /* đúng width hiện tại của bạn */
     --sidebar-gap: 30px;
 }
 
@@ -637,3 +637,4 @@ footer {
     background: #007BFF;
     border-radius: 2px;
 }
+
