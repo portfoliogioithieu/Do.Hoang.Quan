@@ -537,10 +537,11 @@ header {
     width: var(--sidebar-width);
     height: calc(100vh - 372px);
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #e7e5e5;
     border-right: 1px solid #ddd;
     z-index: 1000; /* thấp hơn header */
     overflow-y: auto;
+    border-radius: 30px;
 }
 
 
@@ -757,5 +758,28 @@ header {
         box-shadow: none;
         border: 1px solid #999;
         page-break-inside: avoid;
+    }
+}
+/* ===== PERSONAL INFO – CONTACT STYLE LINKS ===== */
+#personal-info a {
+    color: #0547fa;              
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.25s ease, transform 0.2s ease;
+}
+
+/* Hover */
+#personal-info a:hover {
+    color: #f87c07;
+    text-decoration: underline;
+    transform: translateY(-1px);
+}
+
+/* Print / PDF */
+@media print {
+    #personal-info a {
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
     }
 }
