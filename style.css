@@ -435,3 +435,83 @@ section li {
     text-align: justify;
     text-justify: inter-word;
 }
+/* Button xem chương trình đào tạo */
+.edu-button {
+    display: inline-block;
+    margin: 12px 0 20px;
+    padding: 10px 18px;
+    background-color: #003057; /* RMIT blue */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.edu-button:hover {
+    background-color: #e61e2a; /* RMIT red */
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Active (khi click) */
+.edu-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+/* ===== TWO-COLUMN ATA CHAPTER LIST ===== */
+.experience ul ul {
+    columns: 2;              /* chia 2 cột */
+    column-gap: 40px;        /* khoảng cách giữa 2 cột */
+    list-style: disc;
+    padding-left: 25px;
+    margin: 10px 0 20px;
+}
+
+/* Giữ từng item gọn gàng */
+.experience ul ul li {
+    break-inside: avoid;     /* tránh bị cắt giữa 2 cột */
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+/* Mobile: quay về 1 cột */
+@media (max-width: 600px) {
+    .experience ul ul {
+        columns: 1;
+    }
+}
+
+.job-desc {
+    display: none;
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #2b09e7e5; /* xanh dương */
+}
+.job-title.active {
+    color: #007BFF;
+}
+.job-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+.job-title:hover {
+    transform: scale(1.05);
+    color: #007BFF;
+}
+
+/* Khi đang mở */
+.job-title.active {
+    color: #007BFF;
+}
