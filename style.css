@@ -638,3 +638,12 @@ footer {
     border-radius: 2px;
 }
 
+/* ===== FIX ALIGN HEADER vs CONTENT ===== */
+@media (min-width: 993px) {
+    section,
+    footer {
+        margin-left: calc(var(--sidebar-width) + var(--sidebar-gap));
+        margin-right: var(--sidebar-gap);
+    }
+}
+
