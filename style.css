@@ -1,7 +1,9 @@
 :root {
-    --sidebar-width: 380px; /* đúng width hiện tại của bạn */
+    --sidebar-width: 380px;
     --sidebar-gap: 30px;
+    --content-width: 1200px;
 }
+
 
 /* Reset cơ bản */
 * {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, sans-serif;}
@@ -9,7 +11,7 @@ body {background:#f4f6f8; color:#333; line-height:1.6;}
 
 /* Header */
 header {background: linear-gradient(135deg, #4facfe, #00f2fe); color:white; padding:50px 20px;}
-header .header-content {display:flex; align-items:center; max-width:900px; margin:0 auto; gap:30px;}
+header .header-content {display:flex; align-items:center; max-width:1000px; margin:0 auto; gap:30px;}
 header img.avatar {width:200px; height:200px; object-fit:cover; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;}
 header img.avatar:hover {transform:scale(1.05); box-shadow:0 8px 25px rgba(0,0,0,0.3);}
 header .header-text h1 {font-size:2.5rem; margin-bottom:10px;}
@@ -19,7 +21,7 @@ header .contact-btn:hover {background-color:#1ebe57; transform:scale(1.05);}
 header .contact-btn i {font-size:2rem;}
 
 /* Section chung */
-section {max-width:900px; margin:30px auto; padding:15px 20px;}
+section {max-width:1000px; margin:30px auto; padding:15px 20px;}
 section h2 {font-size:2rem; margin-bottom:15px; color:#4facfe; border-left: 5px solid #4facfe; padding-left: 10px;}
 section#about p {font-size:1.3rem;text-align: justify;text-justify: inter-word;}
 
@@ -530,14 +532,13 @@ header {
 /* ===== SIDEBAR ===== */
 .sidebar {
     position: fixed;
-    top: 300px; /* đúng chiều cao header */
+    top: 290px; /* đúng chiều cao header */
     left: 0;
     width: var(--sidebar-width);
-    height: calc(100vh - 120px);
+    height: calc(100vh - 365px);
     padding: 20px;
     background-color: #f8f9fa;
     border-right: 1px solid #ddd;
-
     z-index: 1000; /* thấp hơn header */
     overflow-y: auto;
 }
@@ -571,10 +572,6 @@ header {
 /* Đẩy nội dung sang phải */
 
 
-section,
-footer {
-    margin-left: calc(var(--sidebar-width) + var(--sidebar-gap));
-}
 
 
 @media (max-width: 992px) {
@@ -637,13 +634,24 @@ footer {
     background: #007BFF;
     border-radius: 2px;
 }
-
 /* ===== FIX ALIGN HEADER vs CONTENT ===== */
 @media (min-width: 993px) {
-    section,
-    footer {
-        margin-left: calc(var(--sidebar-width) + var(--sidebar-gap));
-        margin-right: var(--sidebar-gap);
+    section
+    {
+        margin-left: calc(
+            var(--sidebar-width) + var(--sidebar-gap)
+            + (100vw - var(--sidebar-width) - var(--sidebar-gap) - var(--content-width)) / 2
+        );
+        margin-right: auto;
+    }
+}
+@media (min-width: 993px) {
+    header .header-content {
+        margin-left: calc(
+            var(--sidebar-width) + var(--sidebar-gap)
+            + (100vw - var(--sidebar-width) - var(--sidebar-gap) - var(--content-width)) / 2
+        );
+        margin-right: auto;
     }
 }
 
