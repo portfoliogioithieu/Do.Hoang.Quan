@@ -109,19 +109,325 @@
         I am currently seeking opportunities for the following positions:
     </p>
 
-    <ul>
-        <li class="lang-vi"><b>Nhân viên lập lịch phân công lao động (Rostering Officer)</b></li>
-        <li class="lang-en" style="display:none;"><b>- Rostering Officer</b></li>
+    
+<ul>
+<!-- Rostering Officer -->
+<li class="lang-vi">
+    <b class="job-title" onclick="toggleJob('roster')">
+        Nhân viên điều phối lịch trình (Rostering Officer)
+    </b>
 
-        <li class="lang-vi"><b>Nhân viên điều hành bay (Dispatch Officer)</b></li>
-        <li class="lang-en" style="display:none;"><b>- Dispatch Officer</b></li>
+    <div id="roster" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Lập lịch phân công (Crew Rostering):</b>
+                Xây dựng lịch trình làm việc hàng tháng hoặc hàng tuần cho
+                nhân viên phi hành đoàn, đảm bảo mỗi chuyến bay có đủ định biên
+                theo quy định.
+            </li>
+            <li>
+                <b>Đảm bảo tuân thủ pháp lý:</b>
+                Kiểm tra lịch làm việc nhằm tuân thủ các quy định an toàn bay của
+                Cục Hàng không, bao gồm giới hạn giờ bay, thời gian nghỉ ngơi tối thiểu
+                và hiệu lực chứng chỉ chuyên môn.
+            </li>
+            <li>
+                <b>Tối ưu hóa nguồn lực:</b>
+                Sắp xếp lịch trình hiệu quả, giảm thiểu chi phí lưu trú, đi lại
+                và đảm bảo phân bổ công việc công bằng.
+            </li>
+            <li>
+                <b>Xử lý biến động:</b>
+                Phối hợp với bộ phận điều hành bay để điều chỉnh lịch trình khi xảy ra
+                các tình huống như hủy chuyến, delay hoặc nhân sự nghỉ ốm đột xuất.
+            </li>
+            <li>
+                <b>Quản lý đào tạo:</b>
+                Sắp xếp thời gian cho phi hành đoàn tham gia các khóa huấn luyện định kỳ, 
+                kiểm tra giả định (simulator) mà không làm ảnh hưởng đến hoạt động khai thác bay.
+            </li>
+        </ul>
+    </div>
+</li>
 
-        <li class="lang-vi">
-            <b>Nhân viên kiểm soát tải trọng / Điều phối sân đỗ / Liên lạc mặt đất</b>
-        </li>
-        <li class="lang-en" style="display:none;">
-            <b>- Load Control / Ramp Coordinator / Headset</b>
-        </li>
+<!-- English title and description -->
+<li class="lang-en" style="display:none;">
+    <b class="job-title" onclick="toggleJob('roster-en')">
+        Rostering Officer
+    </b>
+
+    <div id="roster-en" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Crew Rostering:</b>
+                Developing monthly or weekly work schedules for flight crew members,
+                ensuring that each flight is staffed according to regulatory requirements.
+            </li>
+            <li>
+                <b>Regulatory Compliance:</b>
+                Reviewing work schedules to comply with aviation safety regulations from
+                the Civil Aviation Authority, including flight hour limits, minimum rest periods,
+                and validity of professional certifications.
+            </li>
+            <li>
+                <b>Resource Optimization:</b>
+                Efficiently arranging schedules to minimize accommodation and travel costs,
+                and ensuring fair workload distribution.
+            </li>
+            <li>
+                <b>Handling Changes:</b>
+                Coordinating with flight operations to adjust schedules in case of flight cancellations,
+                delays, or unexpected crew absences.
+            </li>
+            <li>
+                <b>Training Management:</b>
+                Scheduling flight crew for periodic training sessions and simulator checks
+                without affecting flight operations.
+            </li>
+        </ul>
+    </div>
+</li>
+
+
+
+<!-- Dispatch Officer -->
+<li class="lang-vi">
+    <b class="job-title" onclick="toggleJob('dispatch')">
+        Nhân viên điều độ / khai thác bay (Dispatch Officer)
+    </b>
+
+    <div id="dispatch" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Lập kế hoạch bay (Operational Flight Plan – OFP):</b>
+                Tính toán đường bay tối ưu, độ cao, vận tốc và lượng nhiên liệu cần thiết
+                dựa trên trọng tải, quãng đường và điều kiện khai thác.
+            </li>
+            <li>
+                <b>Phân tích khí tượng:</b>
+                Theo dõi và đánh giá điều kiện thời tiết tại sân bay đi,
+                sân bay đến và các sân bay dự bị nhằm hỗ trợ quyết định cất cánh
+                hoặc điều chỉnh lộ trình bay.
+            </li>
+            <li>
+                <b>Giám sát hành trình bay:</b>
+                Theo dõi vị trí và tình trạng chuyến bay liên tục từ khi cất cánh
+                đến khi hạ cánh, hỗ trợ phi công xử lý các tình huống bất thường
+                hoặc khẩn cấp.
+            </li>
+            <li>
+                <b>Phối hợp vận hành:</b>
+                Đóng vai trò cầu nối thông tin giữa phi công,
+                bộ phận kỹ thuật, phục vụ mặt đất
+                và các cơ quan quản lý điều hành bay.
+            </li>
+        </ul>
+    </div>
+</li>
+
+<li class="lang-en" style="display:none;">
+    <b class="job-title" onclick="toggleJob('dispatch-en')">
+        Dispatch Officer
+    </b>
+
+    <div id="dispatch-en" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Flight Planning (OFP):</b>
+                Calculating optimal routes, altitudes, cruising speed,
+                and required fuel based on payload, distance, and operational conditions.
+            </li>
+            <li>
+                <b>Meteorological Analysis:</b>
+                Monitoring weather conditions at departure,
+                destination, and alternate airports to support
+                go/no-go decisions and route adjustments.
+            </li>
+            <li>
+                <b>Flight Monitoring:</b>
+                Continuously tracking flight status from takeoff to landing,
+                assisting pilots in abnormal or emergency situations.
+            </li>
+            <li>
+                <b>Operational Coordination:</b>
+                Acting as a communication link between pilots,
+                maintenance teams, ground handling,
+                and air traffic authorities.
+            </li>
+        </ul>
+    </div>
+</li>
+
+
+<!-- Load Control / Ramp / Headset -->
+<li class="lang-vi">
+    <b class="job-title" onclick="toggleJob('loadcontrol')">
+        Nhân viên Cân bằng trọng tải (Load Control)
+    </b>
+
+    <div id="loadcontrol" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Lập kế hoạch xếp tải:</b>
+                Tính toán phân bổ vị trí hành khách, hành lý, hàng hóa và bưu phẩm vào các hầm hàng.
+            </li>
+            <li>
+                <b>Kiểm soát trọng tâm (CG):</b>
+                Đảm bảo máy bay luôn nằm trong giới hạn thăng bằng an toàn để cất cánh, bay và hạ cánh.
+            </li>
+            <li>
+                <b>Phát hành Loadsheet:</b>
+                Lập bản cân bằng trọng tải cuối cùng và gửi cho cơ trưởng ký xác nhận trước khi đóng cửa tàu bay.
+            </li>
+            <li>
+                <b>Phối hợp:</b>
+                Gửi số liệu xếp tải (LIR) cho bộ phận bốc xếp dưới sân đậu để thực hiện chất xếp đúng sơ đồ.
+            </li>
+        </ul>
+    </div>
+</li>
+
+<li class="lang-en" style="display:none;">
+    <b class="job-title" onclick="toggleJob('loadcontrol-en')">
+        Load Control Officer
+    </b>
+
+    <div id="loadcontrol-en" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Load Planning:</b>
+                Calculating passenger, baggage, cargo, and mail distribution in the aircraft holds.
+            </li>
+            <li>
+                <b>Center of Gravity (CG) Control:</b>
+                Ensuring the aircraft remains within safe balance limits for takeoff, flight, and landing.
+            </li>
+            <li>
+                <b>Loadsheet Issuance:</b>
+                Preparing the final loadsheet and sending it to the Captain for approval before aircraft doors close.
+            </li>
+            <li>
+                <b>Coordination:</b>
+                Sending load information (LIR) to ramp handling teams to ensure proper loading according to plan.
+            </li>
+        </ul>
+    </div>
+</li>
+
+<!-- Ramp Coordinator -->
+<li class="lang-vi">
+    <b class="job-title" onclick="toggleJob('ramp')">
+        Nhân viên Điều phối sân đậu (Ramp Coordinator)
+    </b>
+
+    <div id="ramp" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Giám sát tại chỗ:</b>
+                Có mặt tại chân tàu bay để kiểm soát toàn bộ quy trình phục vụ mặt đất (tra nạp nhiên liệu, vệ sinh, suất ăn, bốc xếp).
+            </li>
+            <li>
+                <b>Quản lý thời gian (Turnaround):</b>
+                Đảm bảo các bộ phận hoàn thành công việc đúng tiến độ để tàu bay khởi hành đúng giờ (OTP).
+            </li>
+            <li>
+                <b>Xử lý sự cố:</b>
+                Giải quyết các phát sinh ngay tại sân đậu như chậm hành lý, thiếu trang thiết bị hoặc sự cố kỹ thuật đột xuất.
+            </li>
+            <li>
+                <b>Báo cáo:</b>
+                Ghi nhận thời gian bắt đầu/kết thúc các dịch vụ để làm cơ sở dữ liệu vận hành.
+            </li>
+        </ul>
+    </div>
+</li>
+
+<li class="lang-en" style="display:none;">
+    <b class="job-title" onclick="toggleJob('ramp-en')">
+        Ramp Coordinator
+    </b>
+
+    <div id="ramp-en" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>On-Site Supervision:</b>
+                Being present at the aircraft stand to oversee all ground handling operations (fueling, cleaning, catering, loading).
+            </li>
+            <li>
+                <b>Turnaround Management:</b>
+                Ensuring all departments complete tasks on schedule for on-time departure (OTP).
+            </li>
+            <li>
+                <b>Issue Handling:</b>
+                Resolving problems at the ramp such as delayed baggage, missing equipment, or unexpected technical issues.
+            </li>
+            <li>
+                <b>Reporting:</b>
+                Recording service start/end times to maintain operational data.
+            </li>
+        </ul>
+    </div>
+</li>
+
+<!-- Headset / Interphone -->
+<li class="lang-vi">
+    <b class="job-title" onclick="toggleJob('headset')">
+        Nhân viên liên lạc mặt đất (Headset)
+    </b>
+
+    <div id="headset" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Liên lạc với Tổ lái:</b>
+                Sử dụng hệ thống tai nghe kết nối với buồng lái để trao đổi với phi công trong quá trình chuẩn bị khởi hành.
+            </li>
+            <li>
+                <b>Giám sát khởi động động cơ:</b>
+                Quan sát bên ngoài và thông báo cho phi công tình trạng động cơ khi bắt đầu nổ máy.
+            </li>
+            <li>
+                <b>Điều phối đẩy lùi (Pushback):</b>
+                Phối hợp giữa xe kéo và phi công để đẩy máy bay từ vị trí đỗ ra đường lăn an toàn.
+            </li>
+            <li>
+                <b>Tín hiệu cuối cùng:</b>
+                Thực hiện quy trình rút chốt an toàn (pin), giơ cao cho phi công thấy và vẫy tay xác nhận máy bay an toàn để tự lăn bánh.
+            </li>
+        </ul>
+    </div>
+</li>
+
+<li class="lang-en" style="display:none;">
+    <b class="job-title" onclick="toggleJob('headset-en')">
+        Headset / Interphone Officer
+    </b>
+
+    <div id="headset-en" class="job-desc" style="display:none;">
+        <ul>
+            <li>
+                <b>Communication with Flight Crew:</b>
+                Using headset system to communicate with pilots during pre-departure preparation.
+            </li>
+            <li>
+                <b>Engine Start Monitoring:</b>
+                Observing outside and reporting to pilots engine status at startup (fire, smoke, or leaks).
+            </li>
+            <li>
+                <b>Pushback Coordination:</b>
+                Coordinating between tow vehicles and pilots to safely push the aircraft from stand to taxiway.
+            </li>
+            <li>
+                <b>Final Signals:</b>
+                Completing safety pin removal procedures, raising signals for pilots, and giving visual confirmation that aircraft is safe for pushback.
+            </li>
+        </ul>
+    </div>
+</li>
+
+            <div class="experience-gallery">
+                <img src="maybay.jpg" alt="hinh anh may bay">
+            </div>
+        
     </ul>
 </section>
 
@@ -190,6 +496,25 @@
                 <strong>Graduation Year:</strong> 2025
             </p>
 
+            <!-- Button xem chương trình đào tạo -->
+            <div class="lang-vi">
+                <a 
+                    href="https://www.rmit.edu.vn/vi/hoc-tap-tai-rmit/chuong-trinh-cu-nhan/cu-nhan-khoa-hoc-ung-dung-hang-khong"
+                    target="_blank"
+                    class="edu-button">
+                    Xem chương trình đào tạo ĐH RMIT
+                </a>
+            </div>
+
+            <div class="lang-en" style="display:none;">
+                <a 
+                    href="https://www.rmit.edu.vn/vi/hoc-tap-tai-rmit/chuong-trinh-cu-nhan/cu-nhan-khoa-hoc-ung-dung-hang-khong"
+                    target="_blank"
+                    class="edu-button">
+                    View RMIT Program Details
+                </a>
+            </div>
+
             <p class="lang-vi">
                 <strong>Kỹ năng máy tính:</strong>
                 Thành thạo Microsoft Office Suite (Word, Excel, PowerPoint).
@@ -204,10 +529,13 @@
                 currently awaiting the issuance of the certificate, which is
                 expected to be received by the end of December 2025.
             </p>
-
+            <div class="experience-gallery">
+            <img src="RMIT.jpg" alt="RMIT">
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- Work Experience -->
 
@@ -233,6 +561,9 @@
         <li>
             <strong>Thực tập sinh tại Pacific Airlines -  Phòng An toàn, An ninh & Đảm bảo Chất lượng (SSQA)
             từ tháng 11/2024 – 01/2025</strong>
+            <div class="experience-gallery">
+            <img src="ai-avatar1.jpg" alt="RMIT">
+            </div>
            
             <p>Trong thời gian thực tập tại Phòng <b>SSQA</b> của <b>Pacific Airlines</b>, tôi làm việc cùng các chuyên viên
             trong phòng để hoàn thành đề tài tốt nghiệp về việc ứng dụng <b>AI Avatar</b> trong huấn luyện phỏng
@@ -266,6 +597,10 @@
             viên trong suốt kỳ thực tập bằng việc xây dựng ngân hàng câu hỏi kỹ thuật phục vụ đào tạo.
             Nhiệm vụ chính của tôi là nghiên cứu kỹ từng chương ATA và thiết kế câu hỏi trắc nghiệm theo
             định dạng chuẩn.</p>
+
+            <div class="experience-gallery">
+            <img src="a330-platform.jpg" alt="hinh anh may bay">
+            </div>
             
             <p>Nội dung được chia thành ba nhóm chính: <b>Avionics, Airframe và Powerplant</b>.</p>
             
@@ -667,6 +1002,9 @@
         safe and efficient operational performance.
     </p>
 
+            <div class="experience-gallery">
+            <img src="vietnamairline.jpg" alt="hinh anh may bay">
+            </div>
 </section>
 
 
