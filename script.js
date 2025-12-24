@@ -116,4 +116,16 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 
+function toggleJob(id) {
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+function toggleJob(id) {
+    const el = document.getElementById(id);
+    const title = event.target;
+
+    el.style.display = (el.style.display === "block") ? "none" : "block";
+    title.classList.toggle("active");
+}
+
 
