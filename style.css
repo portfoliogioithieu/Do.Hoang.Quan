@@ -532,10 +532,10 @@ header {
 /* ===== SIDEBAR ===== */
 .sidebar {
     position: fixed;
-    top: 290px; /* đúng chiều cao header */
+    top: 280px; /* đúng chiều cao header */
     left: 0;
     width: var(--sidebar-width);
-    height: calc(100vh - 365px);
+    height: calc(100vh - 372px);
     padding: 20px;
     background-color: #f8f9fa;
     border-right: 1px solid #ddd;
@@ -546,7 +546,7 @@ header {
 
 .sidebar h3 {
     margin-top: 0;
-    font-size: 20px;
+    font-size: 30px;
     color: #003366;
 }
 
@@ -556,7 +556,7 @@ header {
 }
 
 .sidebar li {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .sidebar a {
@@ -570,9 +570,6 @@ header {
 }
 
 /* Đẩy nội dung sang phải */
-
-
-
 
 @media (max-width: 992px) {
     .sidebar {
@@ -654,4 +651,111 @@ header {
         margin-right: auto;
     }
 }
+/* ===== REFERENCES – SMALLER TEXT ===== */
+#references .refs-grid li {
+    font-size: 1.15rem;        /* chữ nhỏ lại */
+    line-height: 1.55;
+}
 
+/* Tên người tham chiếu */
+#references .ref-name {
+    font-size: 1.25rem;        /* nhỏ hơn trước nhưng vẫn nổi */
+}
+
+/* Label */
+#references .label {
+    font-size: 1.15rem;
+}
+
+/* Link email / phone */
+#references a {
+    font-size: 1.15rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #references .refs-grid li {
+        font-size: 1.1rem;
+    }
+
+    #references .ref-name {
+        font-size: 1.2rem;
+    }
+}
+
+/* Print / PDF */
+@media print {
+    #references .refs-grid li {
+        font-size: 10.5pt;
+        line-height: 1.4;
+    }
+
+    #references .ref-name {
+        font-size: 11pt;
+    }
+}
+
+/* ===============================
+   REFERENCES – TWO COLUMNS
+================================ */
+#references .refs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột */
+    gap: 30px 40px; /* hàng | cột */
+    margin-top: 20px;
+}
+
+/* Mỗi reference như 1 card nhẹ */
+#references .refs-grid li {
+    list-style: none;
+    padding: 18px 20px;
+    background: #fdf1b4;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Tên người tham chiếu */
+#references .ref-name {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+/* Label */
+#references .label {
+    font-weight: 600;
+}
+
+/* Link */
+#references a {
+    color: #007BFF;
+    text-decoration: none;
+}
+#references a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE – MOBILE
+================================ */
+@media (max-width: 768px) {
+    #references .refs-grid {
+        grid-template-columns: 1fr; /* về 1 cột */
+    }
+}
+
+/* ===============================
+   PRINT / PDF
+================================ */
+@media print {
+    #references .refs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10mm;
+    }
+
+    #references .refs-grid li {
+        box-shadow: none;
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+}
